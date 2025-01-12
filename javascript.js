@@ -24,3 +24,17 @@ function getComputerChoice() {
 
 console.log(getComputerChoice())
 
+// Create function that logs user's choice
+function getHumanChoice() {
+    return prompt("Your move: Rock, Paper or Scissors?","")
+}
+
+console.log(getHumanChoice())
+
+// Game will keep track of the players score. 
+// Write variables to keep track of the players score.
+
+// Create two new variables named humanScore and computerScore in the global scope.
+// Initialize those variables with the value of 0.
+
+
