@@ -40,35 +40,32 @@ let computerScore = 0;
 
 function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice()) {
     if (humanChoice === "rock" && computerChoice === "Scissors") {
-        return "You win! Rock beats Scissors."
+        alert("You win! Rock beats Scissors.")
+        humanScore = ++humanScore
     } else if (humanChoice === "rock" && computerChoice === "Paper") {
-        return "You lose! Paper beats Rock."
+        alert("You lose! Paper beats Rock.")
+        computerScore = ++computerScore
     } else if (humanChoice === "rock" && computerChoice === "Rock") {
-        return "It's a draw! You both chose Rock."
+        alert("It's a draw! You both chose Rock.")
     } else if (humanChoice === "paper" && computerChoice === "Rock") {
-        return "You win! Paper beats Rock."
+        alert("You win! Paper beats Rock.")
+        humanScore = ++humanScore
     } else if (humanChoice === "paper" && computerChoice === "Scissors") {
-        return "You lose! Scissors beats Paper."
+        alert("You lose! Scissors beats Paper.")
+        computerScore = ++computerScore
     } else if (humanChoice === "paper" && computerChoice === "Paper") {
-        return "It's a draw! You both chose Paper."
+        alert("It's a draw! You both chose Paper.")
     } else if (humanChoice === "scissors" && computerChoice === "Paper") {
-        return "You win! Scissors beats Paper."
+        alert("You win! Scissors beats Paper.")
+        humanScore = ++humanScore
     } else if (humanChoice === "scissors" && computerChoice === "Rock") {
-        return "You lose! Rock beats Scissors."
+        alert("You lose! Rock beats Scissors.")
+        computerScore = ++computerScore
     } else if (humanChoice === "scissors" && computerChoice === "Scissors") {
-        return "It's a draw! You both chose Scissors."
+        alert("It's a draw! You both chose Scissors.")
     }
 }
 
-console.log(playRound())
+playRound()
 
-
-
-
-// scissors > paper
-// paper > rock
-// rock > scissors
-
-// scissors = scissors
-// rock = rock
-// paper = paper
+console.log(humanScore)
