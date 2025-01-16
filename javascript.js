@@ -1,6 +1,4 @@
 // index.html
-console.log("Hello World!")
-
 // Your game will be played against the computer.
 // You will write a function that randomly returns “rock”, “paper” or “scissors”.
 
@@ -8,8 +6,6 @@ console.log("Hello World!")
 function getRandom() {
     return Math.random()
 }
-
-console.log(getRandom())
 
 // Create a new function named getComputerChoice.
 function getComputerChoice() {
