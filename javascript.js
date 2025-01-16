@@ -36,36 +36,57 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+// Create variables that tracks games played
+let gamesPlayed;
+
 // Write the logic to play a single round
 
 function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice()) {
     if (humanChoice === "rock" && computerChoice === "Scissors") {
-        alert("You win! Rock beats Scissors.")
+        console.log("You win! Rock beats Scissors.")
         humanScore = ++humanScore
     } else if (humanChoice === "rock" && computerChoice === "Paper") {
-        alert("You lose! Paper beats Rock.")
+        console.log("You lose! Paper beats Rock.")
         computerScore = ++computerScore
     } else if (humanChoice === "rock" && computerChoice === "Rock") {
-        alert("It's a draw! You both chose Rock.")
+        console.log("It's a draw! You both chose Rock.")
     } else if (humanChoice === "paper" && computerChoice === "Rock") {
-        alert("You win! Paper beats Rock.")
+        console.log("You win! Paper beats Rock.")
         humanScore = ++humanScore
     } else if (humanChoice === "paper" && computerChoice === "Scissors") {
-        alert("You lose! Scissors beats Paper.")
+        console.log("You lose! Scissors beats Paper.")
         computerScore = ++computerScore
     } else if (humanChoice === "paper" && computerChoice === "Paper") {
-        alert("It's a draw! You both chose Paper.")
+        console.log("It's a draw! You both chose Paper.")
     } else if (humanChoice === "scissors" && computerChoice === "Paper") {
-        alert("You win! Scissors beats Paper.")
+        console.log("You win! Scissors beats Paper.")
         humanScore = ++humanScore
     } else if (humanChoice === "scissors" && computerChoice === "Rock") {
-        alert("You lose! Rock beats Scissors.")
+        console.log("You lose! Rock beats Scissors.")
         computerScore = ++computerScore
     } else if (humanChoice === "scissors" && computerChoice === "Scissors") {
-        alert("It's a draw! You both chose Scissors.")
+        console.log("It's a draw! You both chose Scissors.")
+    }
+    ++gamesPlayed
+}
+
+function playGame() {
+    for (let gamesPlayed = 1; gamesPlayed <= 5; ++gamesPlayed) {
+        console.log("Round" + " " + gamesPlayed)
+        playRound()
+        console.log("User:" + " " + humanScore)
+        console.log("Computer:" + " " + computerScore)
+    }
+    if (humanScore > computerScore) {
+        console.log("Well done, you beat the computer.")
+    } else if (computerScore > humanScore) {
+        console.log("You lost to the computer :(")
+    } else if (humanScore = computerScore) {
+        console.log("It's a draw!!.")
     }
 }
 
-playRound()
 
-console.log(humanScore)
+playGame()
+
+
